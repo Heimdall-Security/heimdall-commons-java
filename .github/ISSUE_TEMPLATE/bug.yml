@@ -22,44 +22,11 @@ body:
       label: Area
       description: Affected area
       options:
-        - account/api
-        - account/ui
-        - adapter/fuse
-        - adapter/java-cli
-        - adapter/javascript
-        - adapter/jee
-        - adapter/jee-saml
-        - adapter/spring
-        - admin/api
-        - admin/cli
-        - admin/fine-grained-permissions
-        - admin/ui
-        - admin/client-java
-        - admin/client-js
-        - authentication
-        - authentication/webauthn
-        - authorization-services
-        - ci
-        - core
-        - dependencies
-        - dist/quarkus
-        - docs
-        - identity-brokering
-        - import-export
-        - infinispan
-        - ldap
-        - login/ui
-        - oidc
-        - oid4vc
-        - operator
-        - organizations
-        - saml
-        - storage
-        - testsuite
-        - token-exchange
-        - translations
-        - user-profile
-        - welcome/ui
+        - Directory Service
+        - Authentication API
+        - Tokens API
+        - Credential Management API
+        - Policies API
     validations:
       required: true
   - type: textarea
