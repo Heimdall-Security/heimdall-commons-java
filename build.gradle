@@ -1,0 +1,44 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+}
+
+group = 'com.heimdallauth.server'
+version = System.getenv('VERSION') ?: (project.hasProperty('version') ? project.version : '0.0.1-SNAPSHOT')
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.10.0')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+}
+
+test {
+    useJUnitPlatform()
+}
+publishing {
+    if (System.getenv('CI') != null) {
+        repositories {
+            maven {
+                def githubRepo = System.getenv('GITHUB_REPOSITORY')
+                println("GITHUB_REPOSITORY: $githubRepo")
+                if (githubRepo != null) {
+                    url = uri("https://maven.pkg.github.com/${githubRepo}")
+                }
+                credentials {
+                    username = System.getenv('GITHUB_ACTOR')
+                    password = System.getenv('GITHUB_TOKEN')
+                }
+            }
+        }
+        publications {
+            mavenJava(MavenPublication) {
+                from components.java
+            }
+        }
+    } else {
+        println 'Publishing is disabled for local builds.'
+    }
+}
