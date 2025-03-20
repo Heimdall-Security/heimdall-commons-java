@@ -2,7 +2,7 @@ name: Cleanup Java Packages
 on:
   workflow_dispatch:
   schedule:
-    - cron: '0 0 * * *'
+    - cron: '0 0 1 * *'
 permissions:
   contents: read
   packages: write
@@ -13,7 +13,7 @@ jobs:
       - name: Delete all packages
         uses: actions/delete-package-versions@v5
         with:
-          package-name: 'com.heimdallauth.server:heimdall-commons-java'
+          package-name: 'com.heimdallauth.server.heimdall-commons-java'
           package-type: 'maven'
           ignore-versions: '^\d+\.\d+\.\d+$'
           min-versions-to-keep: '5'
