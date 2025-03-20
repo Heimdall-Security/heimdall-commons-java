@@ -12,10 +12,8 @@ jobs:
     steps:
       - name: Delete all packages
         uses: actions/delete-package-versions@v5
-        env:
-          ACTIONS_STEP_DEBUG: true
         with:
-          package-name: 'heimdall-commons-java'
+          package-name: 'com.heimdallauth.server.heimdall-commons-java'
           package-type: 'maven'
           ignore-versions: '^\d+\.\d+\.\d+$'
           min-versions-to-keep: '5'
