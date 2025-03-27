@@ -2,7 +2,6 @@ package com.heimdallauth.server.dto.bifrost;
 
 import com.heimdallauth.server.models.bifrost.SmtpProperties;
 import com.heimdallauth.server.models.bifrost.SuppressionEntryModel;
-import com.heimdallauth.server.utils.HeimdallMetadata;
 import lombok.*;
 
 import java.util.List;
