@@ -16,5 +16,5 @@ public class ConfigurationSetModel {
     private String configurationSetDescription;
     private boolean enabled;
     private List<SuppressionEntryModel> suppressionEntries;
-
+    private SmtpProperties smtpProperties;
 }
