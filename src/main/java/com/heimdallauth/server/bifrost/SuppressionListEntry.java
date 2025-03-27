@@ -1,6 +1,6 @@
 package com.heimdallauth.server.bifrost;
 
-import com.heimdallauth.server.constants.SuppressionListEntryType;
+import com.heimdallauth.server.constants.bifrost.SuppressionListEntryType;
 import lombok.*;
 
 @Builder
