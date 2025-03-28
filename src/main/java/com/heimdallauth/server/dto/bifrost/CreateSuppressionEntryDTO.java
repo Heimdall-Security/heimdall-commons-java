@@ -11,6 +11,7 @@ import lombok.*;
 @Setter
 public class CreateSuppressionEntryDTO {
     private SuppressionListEntryType entryType;
+    private String tenantId;
     private String suppressionEntryValue;
     private SuppressionReason reason;
 }
