@@ -9,9 +9,13 @@ version = System.getenv('VERSION') ?: (project.hasProperty('version') ? project.
 repositories {
     mavenCentral()
 }
+ext{
+    set('modelMapperVersion', '3.0.0')
+}
 
 dependencies {
     implementation 'org.projectlombok:lombok:1.18.36'
+    implementation "org.modelmapper:modelmapper:${modelMapperVersion}"
     annotationProcessor('org.projectlombok:lombok:1.18.36')
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
