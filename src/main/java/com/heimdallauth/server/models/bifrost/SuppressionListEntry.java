@@ -1,4 +1,4 @@
-package com.heimdallauth.server.bifrost;
+package com.heimdallauth.server.models.bifrost;
 
 import com.heimdallauth.server.constants.bifrost.SuppressionListEntryType;
 import lombok.*;
