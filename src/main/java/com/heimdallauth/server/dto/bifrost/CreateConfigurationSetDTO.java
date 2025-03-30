@@ -1,10 +1,10 @@
 package com.heimdallauth.server.dto.bifrost;
 
 import com.heimdallauth.server.models.bifrost.SmtpProperties;
-import com.heimdallauth.server.models.bifrost.SuppressionEntryModel;
 import lombok.*;
 
 import java.util.List;
+import java.util.UUID;
 
 @Builder
 @NoArgsConstructor
@@ -14,6 +14,6 @@ import java.util.List;
 public class CreateConfigurationSetDTO {
     private String configurationSetName;
     private String configurationSetDescription;
-    private List<SuppressionEntryModel> emailSuppressionEntries;
+    private List<UUID> emailSuppressionEntries;
     private SmtpProperties smtpProperties;
 }
