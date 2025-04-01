@@ -1,17 +1,12 @@
 package com.heimdallauth.server.models.bifrost;
 
 import com.heimdallauth.server.constants.bifrost.EmailPriority;
-import lombok.*;
 
-@Builder
-@NoArgsConstructor
-@AllArgsConstructor
-@Getter
-@Setter
-public class Template {
-    private String hrn;
-    private String templateName;
-    private String templateDescription;
-    private EmailTemplateContent templatedContent;
-    private EmailPriority defaultEmailPriority;
+public record Template(
+        String hrn,
+        String templateName,
+        String templateDescription,
+        EmailTemplateContent templatedContent,
+        EmailPriority defaultEmailPriority
+) {
 }
