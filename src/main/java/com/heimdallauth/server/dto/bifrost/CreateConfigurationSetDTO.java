@@ -7,6 +7,7 @@ import java.util.UUID;
 
 public record CreateConfigurationSetDTO(
         String configurationSetName,
+        UUID tenantId,
         String configurationSetDescription,
         List<UUID> suppressionEntryIds,
         SmtpProperties smtpProperties
