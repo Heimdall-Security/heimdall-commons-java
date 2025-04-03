@@ -2,7 +2,7 @@ name: Java CI Builder
 on:
   push:
     tags:
-      - 'v*.*.*'
+      - "*"
     branches:
       - "main"
       - "develop"
