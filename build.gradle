@@ -9,9 +9,14 @@ version = System.getenv('VERSION') ?: (project.hasProperty('version') ? project.
 repositories {
     mavenCentral()
 }
+ext{
+    set('mapStructVersion', '1.6.3')
+}
 
 dependencies {
     implementation 'org.projectlombok:lombok:1.18.36'
+    implementation "org.mapstruct:mapstruct:${mapStructVersion}"
+    annotationProcessor "org.mapstruct:mapstruct-processor:${mapStructVersion}"
     annotationProcessor('org.projectlombok:lombok:1.18.36')
     testImplementation platform('org.junit:junit-bom:5.10.0')
     testImplementation 'org.junit.jupiter:junit-jupiter'
