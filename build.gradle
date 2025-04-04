@@ -4,7 +4,7 @@ plugins {
 }
 
 group = 'com.heimdallauth.server'
-version = System.getenv('VERSION') ?: (project.hasProperty('version') ? project.version : '0.0.1-SNAPSHOT')
+version = (System.getenv('VERSION') ?: (project.hasProperty('version') ? project.version : '0.0.1-SNAPSHOT')).replaceFirst(/^v/, '')
 
 repositories {
     mavenCentral()
