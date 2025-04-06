@@ -1,8 +1,10 @@
 package com.heimdallauth.server.constants.bifrost;
 
 public enum SmtpAuthenticationMethod {
-    OAUTH2,
-    LOGIN,
+    NONE,
     PLAIN,
-    CRAM_MD5
+    ENCRYPTED_PASSWORD,
+    BASIC,
+    NTLM,
+    OAUTH2
 }
