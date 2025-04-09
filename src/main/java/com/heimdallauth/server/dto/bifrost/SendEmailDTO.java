@@ -10,6 +10,7 @@ import java.util.UUID;
 public record SendEmailDTO(
         UUID configurationSetId,
         EmailDestination destination,
+        UUID templateId,
         EmailContent content,
         EmailContext context,
         List<String> replyToEmails
