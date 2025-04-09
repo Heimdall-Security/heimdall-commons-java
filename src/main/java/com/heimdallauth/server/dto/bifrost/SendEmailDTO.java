@@ -1,5 +1,6 @@
 package com.heimdallauth.server.dto.bifrost;
 
+import com.heimdallauth.server.models.bifrost.EmailContext;
 import com.heimdallauth.server.models.bifrost.EmailDestination;
 import com.heimdallauth.server.models.bifrost.EmailContent;
 
@@ -10,6 +11,7 @@ public record SendEmailDTO(
         UUID configurationSetId,
         EmailDestination destination,
         EmailContent content,
+        EmailContext context,
         List<String> replyToEmails
 ) {
 }
