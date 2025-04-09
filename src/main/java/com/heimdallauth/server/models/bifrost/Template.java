@@ -5,6 +5,7 @@ import java.util.List;
 import java.util.UUID;
 
 public record Template(
+        UUID templateId,
         String templateName,
         String templateDescription,
         UUID tenantId,
