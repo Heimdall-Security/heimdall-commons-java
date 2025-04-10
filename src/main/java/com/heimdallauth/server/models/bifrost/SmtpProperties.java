@@ -5,6 +5,7 @@ import com.heimdallauth.server.constants.bifrost.SmtpAuthenticationMethod;
 import java.util.Map;
 
 public record SmtpProperties(
+        String propertiesId,
         String serverAddress,
         int portNumber,
         String loginUsername,
