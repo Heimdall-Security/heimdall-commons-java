@@ -1,12 +1,17 @@
 package com.heimdallauth.server.models.bifrost;
 
-import com.heimdallauth.server.constants.bifrost.EmailPriority;
+import java.time.Instant;
+import java.util.List;
+import java.util.UUID;
 
 public record Template(
-        String hrn,
+        UUID templateId,
         String templateName,
         String templateDescription,
-        EmailTemplateContent templatedContent,
-        EmailPriority defaultEmailPriority
+        UUID tenantId,
+        EmailContent content,
+        List<MessageHeader> defaultEmailHeaders,
+        Instant createdAt,
+        Instant updatedAt
 ) {
 }
